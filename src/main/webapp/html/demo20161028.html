@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+	<title>javascript</title>
+	<style type="text/css">
+		body {
+			font-size: 12px;
+		}
+
+		#txt {
+			height: 400px;
+			width: 600px;
+			border: #333 solid 1px;
+			padding: 5px;
+		}
+
+		p {
+			line-height: 18px;
+			text-indent: 2em;
+		}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" >
+			//定义"改变颜色"的函数
+			
+			function changePColor(){
+				$("p").css("color","red");//改变了标签p内容的颜色
+				
+			}
+			//定义"改变宽高"的函数
+			function changeWH(){
+				$("p").css({width:350,height:50});//改变的标签p的宽高，并没有改变字体的大小
+			}
+
+			//定义"隐藏内容"的函数
+			function hideContent(){
+				$("p").attr("hidden",true);//将标签p隐藏
+			}
+			
+			//定义"显示内容"的函数
+			function showContent(){
+				$("p").attr("hidden",false);//将标签p从隐藏给恢复
+			}
+			//定义"取消设置"的函数
+			function cancelSet(){
+				var cancle=confirm("是否取消所有设置？");
+				if(cancle == true){
+					window.location.reload();//刷新当前页面
+					}
+			}
+	</script>
+</head>
+<body>
+	<h2 id="con">JavaScript课程</H2>
+	<div id="txt">
+		<h5>JavaScript为网页添加动态效果并实现与用户交互的功能。</h5>
+		<p>1. JavaScript入门篇，让不懂JS的你，快速了解JS。</p>
+		<p>2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。</p>
+		<p>3.
+			学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。</p>
+	</div>
+	<form>
+		<!--当点击相应按钮，执行相应操作，为按钮添加相应事件-->
+		<input id="button" type="button" value="改变颜色" onclick="changePColor()"></input>
+		<input type="button" value="改变宽高" onclick="changeWH()"></input>
+		<input type="button" value="隐藏内容" onclick="hideContent()"></input>
+		<input type="button" value="显示内容" onclick="showContent()"></input>
+		<input type="button" value="取消设置" onclick="cancelSet()"></input>
+		
+	</form>
+	
+</body>
+</html>
