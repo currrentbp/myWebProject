@@ -1,1 +1,10 @@
-/target/
+target/
+logs/
+/.classpath
+/.project
+/.settings
+*.iml
+.springBeans
+.idea
+*.log*
+*.lock
