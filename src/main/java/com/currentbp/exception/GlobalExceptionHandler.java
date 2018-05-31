@@ -1,4 +1,4 @@
-package com.bp.controller.exception;
+package com.currentbp.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
