@@ -1,6 +1,5 @@
 package com.currentbp.controller;
 
-import com.currentbp.entity.BpTest;
 import com.currentbp.util.all.Assert;
 import org.apache.commons.io.IOUtils;
 import org.springframework.web.bind.annotation.*;
